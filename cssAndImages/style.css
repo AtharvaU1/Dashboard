@@ -82,6 +82,10 @@ ul{
     font-weight: bold;
 }
 
+.sidebar, .buttonDiv > button{
+    color: #FFFFFF;
+}
+
 .insideSidebar{
     display: grid;
     gap: 15%;
@@ -96,6 +100,7 @@ ul{
     display: flex;
     align-items: center;
     gap: 5%;
+    
 }
 
 a{
@@ -196,6 +201,8 @@ a:hover{
     padding: 20px;
     display: grid;
     grid-template-columns: 3fr 1fr;
+    column-gap: 25px;
+    background-color: #D7E1EB;
 }
 
 .projects > h3{
@@ -231,6 +238,7 @@ a:hover{
 }
 
 .innerLinks{
+    height: 50%;
     width: 30%;
     display: flex;
     justify-content: space-evenly;
@@ -242,7 +250,7 @@ a:hover{
     gap: 45px;
 }
 
-.announcementsWrapper > h3{
+.announcementsWrapper > h3, .trendingWrapper > h3{
     margin-bottom: 3%;
 }
 
@@ -265,6 +273,47 @@ a:hover{
 }
 
 .community{
-    border-top: 2px solid red;
-    border-bottom: 2px solid red;
+    border-top: 2px solid #D7E1EB;
+    border-bottom: 2px solid #D7E1EB;
+}
+
+.trendingWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.trending{
+    flex: 1;
+    padding: 20px;
+    display: grid;
+    align-items: center;
+}
+
+.trending > div{
+    display: grid;
+    grid-template-rows: 24px 24px;
+    grid-template-columns: 48px 1fr;
+    column-gap: 10px;
+    grid-auto-flow: column;
+}
+
+.trending > div::before{
+    grid-row: 1/-1;
+}
+
+.navbar, .card, .announcements, .trending{
+    background-color: #FFFFFF;
+}
+
+.announcements, .trending{
+    border-radius: 10px;
+}
+
+.navbar, .card, .announcements, .trending{
+    position: relative;
+    box-shadow: 0 3px 5px 0 #C2C2C2;
+}
+
+.projectsAndStuff, .rightSidebar{
+    font-weight: 595;
 }
